@@ -4,5 +4,4 @@ WORKDIR /app
 COPY . .
 EXPOSE 8080
 WORKDIR /usr/src/app
-COPY --from=build /app/target/*.jar app.jar
 CMD ["java", "-jar", "app.jar"]
