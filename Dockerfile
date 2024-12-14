@@ -1,11 +1,9 @@
-FROM adoptopenjdk/openjdk11 
-      
+FROM adoptopenjdk/openjdk11
+
 EXPOSE 8080
- 
-ENV APP_HOME /usr/src/app
 
-COPY artifact/*.jar $APP_HOME/app.jar
+COPY artifact/*.jar /usr/src/app/app.jar
 
-WORKDIR $APP_HOME
+WORKDIR /usr/src/app
 
 CMD ["java", "-jar", "app.jar"]
